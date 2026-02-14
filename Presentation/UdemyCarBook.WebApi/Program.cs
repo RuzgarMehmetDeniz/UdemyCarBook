@@ -8,12 +8,14 @@ using UdemyCarBook.Application.Interfaces;
 using UdemyCarBook.Application.Interfaces.BlogInterfaces;
 using UdemyCarBook.Application.Interfaces.CarInterfaces;
 using UdemyCarBook.Application.Interfaces.CarPricingInterfaces;
+using UdemyCarBook.Application.Interfaces.TagCloudInterfaces;
 using UdemyCarBook.Application.Services;
 using UdemyCarBook.Persistance.Context;
 using UdemyCarBook.Persistance.Repositories;
 using UdemyCarBook.Persistance.Repositories.BlogRepositories;
 using UdemyCarBook.Persistance.Repositories.CarPricingRepositories;
 using UdemyCarBook.Persistance.Repositories.CarRepository;
+using UdemyCarBook.Persistance.Repositories.TagCloudRepositories;
 
 var builder = WebApplication.CreateBuilder(args);
 
@@ -24,6 +26,7 @@ builder.Services.AddScoped(typeof(IRepository<>), typeof(Repository<>));
 builder.Services.AddScoped(typeof(ICarRepository), typeof(CarRepository));
 builder.Services.AddScoped(typeof(IBlogRepository), typeof(BlogRepository));
 builder.Services.AddScoped(typeof(ICarPricingRepository), typeof(CarPricingRepository));
+builder.Services.AddScoped(typeof(ITagCloudRepository), typeof(TagCloudRepository));
 
 builder.Services.AddScoped<GetAboutQueryHandler>();
 builder.Services.AddScoped<GetAboutByIdQueryHandler>();

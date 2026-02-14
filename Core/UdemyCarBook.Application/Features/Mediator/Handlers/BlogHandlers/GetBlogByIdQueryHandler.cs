@@ -11,7 +11,7 @@ using UdemyCarBook.Domain.Entities;
 
 namespace UdemyCarBook.Application.Features.Mediator.Handlers.BlogHandlres
 {
-    public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery,GetBlogByIdQueryResult>
+    public class GetBlogByIdQueryHandler : IRequestHandler<GetBlogByIdQuery, GetBlogByIdQueryResult>
     {
         private readonly IRepository<Blog> _repository;
 
@@ -28,9 +28,10 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.BlogHandlres
                 BlogID = values.BlogID,
                 Title = values.Title,
                 CreatedDate = values.CreatedDate,
-                CoverImageUrl = values.CoverImageUrl,   
+                CoverImageUrl = values.CoverImageUrl,
                 CategoryID = values.CategoryID,
-                AuthorID = values.AuthorID  
+                AuthorID = values.AuthorID,
+                Description = values.Description
             };
         }
     }
