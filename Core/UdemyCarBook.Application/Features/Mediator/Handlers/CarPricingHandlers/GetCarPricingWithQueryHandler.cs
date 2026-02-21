@@ -27,6 +27,7 @@ namespace UdemyCarBook.Application.Features.Mediator.Handlers.CarPricingHandlers
             return values.Select(x => new GetCarPricingWithCarQueryResult
             {
                 Amount = x.Amount,
+                CarId = x.CarId,
                 CarPricingId = x.CarPricingID,
                 Brand = x.Car.Brand.Name,
                 CoverImageUlr = x.Car.CoverImageUrl,
